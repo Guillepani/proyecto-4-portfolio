@@ -1,7 +1,8 @@
 import './style.css'
+import { Header } from './components/Header/Header.js'
 
 const app = document.querySelector('#app')
 
 app.innerHTML = `
-  <h1>Portfolio</h1>
+  ${Header()}
 `
