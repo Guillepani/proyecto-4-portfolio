@@ -1,27 +1,103 @@
 .contact {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 60px 20px;
+  scroll-margin-top: 100px;
+  padding: 6rem 1.5rem;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(123, 44, 255, 0.22),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(255, 47, 179, 0.18),
+      transparent 30%
+    ),
+    linear-gradient(180deg, #0a0a23 0%, #12123a 100%);
+  color: var(--text-main);
+  text-align: center;
 }
 
 .contact h2 {
-  font-size: 32px;
-  margin-bottom: 15px;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  margin-bottom: 1rem;
+  color: var(--text-main);
+  text-shadow:
+    0 0 8px rgba(0, 217, 255, 0.35),
+    0 0 18px rgba(123, 44, 255, 0.3);
 }
 
 .contact p {
-  margin-bottom: 20px;
-  color: #555;
-  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-soft);
 }
 
 .contact-list {
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
 }
 
 .contact-list li {
-  font-size: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-glow);
+  border-radius: 18px;
+  padding: 1.2rem 1.4rem;
+  text-align: left;
+  backdrop-filter: blur(10px);
+  box-shadow:
+    0 0 0 rgba(0, 0, 0, 0),
+    0 0 18px rgba(0, 217, 255, 0.08);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.contact-list li:hover {
+  transform: translateY(-6px) scale(1.01);
+  border-color: rgba(255, 47, 179, 0.65);
+  box-shadow:
+    0 0 18px rgba(0, 217, 255, 0.18),
+    0 0 28px rgba(123, 44, 255, 0.18),
+    0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.contact-list strong {
+  color: var(--acid-cyan);
+  margin-right: 0.35rem;
+}
+
+.contact-list a {
+  color: #ffffff;
+  text-decoration: none;
+  word-break: break-word;
+  transition:
+    color 0.25s ease,
+    text-shadow 0.25s ease;
+}
+
+.contact-list a:hover {
+  color: var(--electric-blue);
+  text-shadow: 0 0 10px rgba(0, 217, 255, 0.45);
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 4.5rem 1rem;
+  }
+
+  .contact-list li {
+    padding: 1rem;
+    border-radius: 14px;
+  }
+
+  .contact p {
+    font-size: 1rem;
+  }
 }

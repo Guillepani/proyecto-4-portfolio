@@ -4,12 +4,14 @@ export const Header = () => {
   return `
     <header>
       <nav>
-        <h1>Mi Portfolio</h1>
+        <h1>Guillem Paniagua</h1>
+
         <ul>
-          <li>Sobre mí</li>
-          <li>Proyectos</li>
-          <li>Contacto</li>
+          <li><a href="#about">Sobre mí</a></li>
+          <li><a href="#projects">Proyectos</a></li>
+          <li><a href="#contact">Contacto</a></li>
         </ul>
+
       </nav>
     </header>
   `

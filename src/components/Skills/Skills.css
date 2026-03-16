@@ -1,23 +1,129 @@
 .skills {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 60px 20px;
+  padding: 3rem 1.5rem;
+  text-align: center;
 }
 
 .skills h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  margin-bottom: 2rem;
+  color: var(--text-main);
+  text-align: center;
+  text-shadow:
+    0 0 10px rgba(0, 217, 255, 0.35),
+    0 0 25px rgba(123, 44, 255, 0.25);
 }
 
 .skills-list {
   display: flex;
-  gap: 20px;
-  list-style: none;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
 }
 
+/* CARD SKILL */
+
 .skills-list li {
-  background: #eee;
-  padding: 10px 16px;
-  border-radius: 6px;
-  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  padding: 0.85rem 1.4rem;
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-main);
+
+  border: 1px solid var(--border-glow);
+  box-shadow: 0 0 18px rgba(0, 217, 255, 0.08);
+
+  font-weight: 600;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+/* ICONO */
+
+.skills-list li img {
+  width: 22px;
+  height: 22px;
+}
+
+/* HOVER */
+
+.skills-list li:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 47, 179, 0.55);
+  box-shadow:
+    0 0 20px rgba(0, 217, 255, 0.18),
+    0 0 35px rgba(123, 44, 255, 0.14),
+    0 12px 28px rgba(0, 0, 0, 0.28);
+}
+
+/* HTML glow */
+
+.skill-card.html:hover {
+  border-color: #ff6a3d;
+
+  box-shadow:
+    0 0 18px rgba(255, 106, 61, 0.45),
+    0 0 30px rgba(255, 106, 61, 0.25),
+    0 12px 28px rgba(0, 0, 0, 0.28);
+}
+
+/* CSS glow */
+
+.skill-card.css:hover {
+  border-color: #379ad6;
+
+  box-shadow:
+    0 0 18px rgba(55, 154, 214, 0.45),
+    0 0 30px rgba(55, 154, 214, 0.25),
+    0 12px 28px rgba(0, 0, 0, 0.28);
+}
+
+/* JavaScript glow */
+
+.skill-card.js:hover {
+  border-color: #f7df1e;
+
+  box-shadow:
+    0 0 18px rgba(247, 223, 30, 0.45),
+    0 0 30px rgba(247, 223, 30, 0.25),
+    0 12px 28px rgba(0, 0, 0, 0.28);
+}
+
+/* GIT */
+
+.skill-card.git:hover {
+  border-color: #f1502f;
+
+  box-shadow:
+    0 0 18px rgba(241, 80, 47, 0.45),
+    0 0 30px rgba(241, 80, 47, 0.25),
+    0 12px 28px rgba(0, 0, 0, 0.28);
+}
+
+/* REACT */
+
+.skill-card.react:hover {
+  border-color: #61dafb;
+
+  box-shadow:
+    0 0 18px rgba(97, 218, 251, 0.45),
+    0 0 30px rgba(97, 218, 251, 0.25),
+    0 12px 28px rgba(0, 0, 0, 0.28);
+}
+
+/* NODE */
+
+.skill-card.node:hover {
+  border-color: #3c873a;
+
+  box-shadow:
+    0 0 18px rgba(60, 135, 58, 0.45),
+    0 0 30px rgba(60, 135, 58, 0.25),
+    0 12px 28px rgba(0, 0, 0, 0.28);
 }
